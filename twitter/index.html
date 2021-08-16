@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitter API</title>
+
+    <!-- FONTAWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <!-- BOOTSTRAP CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.linx.com.br/app/themes/linx/webpack/dist/images/favicons/favicon-32x32.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css?v=2" />
+  </head>
+
+  <body>
+    <section class="busca">
+      <div class="container">
+        <div class="row py-5">
+          <div class="col-lg-9 mx-auto text-white text-center">
+            <h1 class="display-4">Twitter API</h1>
+            <p class="lead mb-0">Busque seu conteúdo favorito do Twitter</p>
+          </div>
+        </div>
+        <div class="row mb-5">
+          <div class="col-md-12">
+            <div class="bg-white p-5 rounded shadow">
+              <form action="">
+                <div class="p-1 bg-light rounded rounded-pill shadow-sm">
+                  <div class="input-group">
+                    <input
+                      type="search"
+                      placeholder="O que você procura?"
+                      aria-describedby="button-addon1"
+                      class="form-control border-0 bg-light pesquisa"
+                    />
+                    <div class="input-group-append">
+                      <button
+                        id="button"
+                        type="button"
+                        class="btn btn-link text-primary"
+                      >
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container mb-5">
+      <div id="estrutura-tweets" class="row estrutura-tweets">
+        
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+      integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js" integrity="sha512-LGXaggshOkD/at6PFNcp2V2unf9LzFq6LE+sChH7ceMTDP0g2kn6Vxwgg7wkPP7AAtX+lmPqPdxB47A0Nz0cMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/main.js"></script>
+    <script id="entry-template" type="text/x-handlebars-template">
+      <div class="col-md-6 col-lg-4">
+        <div class="card mb-3">
+          <div class="card-body pt-4">
+            <div class="card-twitter">
+              <div class="card-twitter-title-wrapper">
+                <div class="card-twitter-profile-img">
+                  <img class="img-fluid" src="{{user.profile_image_url_https}}" alt="">
+                </div>
+                <div class="informacoes-usuario">
+                  <span class="nome-usuario">{{user.screen_name}}</span>
+                  <span class="login-usuario">{{user.name}}</span>
+                </div>
+              </div>
+              <div class="conteudo">
+                <p class="informacoes-conteudo">
+                  {{text}}
+                </p>
+              </div>
+              <div class="card-twitter-data-post">
+                <a href="#" class="btn btn-sm btn-flash-border-primary">{{dateFormat created_at format="DD MMM YYYY"}}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </script>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+/* FONT ROBOTO */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.btn-primary.focus,
+.btn-primary:focus {
+  box-shadow: unset;
+}
+
+.btn.focus,
+.btn:focus {
+  outline: unset;
+  box-shadow: unset;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+body {
+  background: #ffd89b;
+  background: -webkit-linear-gradient(to right, #ffd89b, #19547b);
+  background: linear-gradient(to right, #ffd89b, #19547b);
+  min-height: 100vh;
+}
+
+/* BUSCA */
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.form-control-underlined {
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-radius: 0;
+  padding-left: 0;
+}
+
+.form-control::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+/* CARDS TWITTER */
+
+.card {
+  border: 0;
+  box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+  -ms-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+}
+
+.card-body{
+  height: 260px;
+}
+
+.card .card-header.no-border {
+  border: 0;
+}
+
+.card .card-header {
+  background: none;
+  padding: 0 0.9375rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+}
+
+.card-twitter .card-twitter-title-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.card-twitter .card-twitter-profile-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #edf1fc;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.card-twitter .card-twitter-dia {
+  color: #4e73e5;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.card-twitter .card-twitter-mes {
+  color: #4e73e5;
+  line-height: 1;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.card-twitter .informacoes-usuario {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.card-twitter .nome-usuario {
+  color: #3c4142;
+  font-size: 14px;
+}
+
+.card-twitter .login-usuario {
+  color: #b1bac5;
+  font-size: 13px;
+}
+
+.card-twitter .conteudo {
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: 0.5rem;
+  height: 135px;
+}
+
+.card-twitter .informacoes-conteudo {
+  color: #727686;
+  padding: 0 0.5rem;
+}
+
+.card-twitter .card-twitter-data-post {
+  text-align: left;
+}
